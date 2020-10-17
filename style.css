@@ -1,0 +1,30 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+.ask {
+ color: #E29578
+}
+.karen {
+color:#006D77
+}
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    ". Search-Results Search-Results"
+    "Categories Search-Results Search-Results"
+    "Categories Search-Results Search-Results"
+    ". Search-Results Search-Results";
+}
+
+.Categories { grid-area: Categories; }
+
+.Search-Results { grid-area: Search-Results; }
