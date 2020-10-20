@@ -1,3 +1,4 @@
+/* Overall Style Choices */
 * {
   padding: 0;
   margin: 0;
@@ -6,18 +7,16 @@
   background-color: #E8E8E8;
 }
 
-h1 {
-  color: #006D77;
-}
 
-h2 {
-  color: #006D77;
-}
-
+/* Headings Styles */
+h1,
+h2,
 h3 {
   color: #006D77;
 }
 
+
+/* Button Styles */
 .btn {
   background-color: #011627;
 }
@@ -30,11 +29,15 @@ h3 {
   background-color: #006D77;
 }
 
+
+/* icon styles */
 i {
   background-color: rgba(0, 0, 0, 0);
   color: #fff;
 }
 
+
+/* Class Styles */
 .primary {
   background-color: #006D77;
   color: #fff;
@@ -43,29 +46,4 @@ i {
 .secondary {
   background-color: #E29578;
   color: #fff;
-}
-
-
-
-
-
-
-.grid-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  gap: 0px 0px;
-  grid-template-areas:
-    ". Search-Results Search-Results"
-    "Categories Search-Results Search-Results"
-    "Categories Search-Results Search-Results"
-    ". Search-Results Search-Results";
-}
-
-.Categories {
-  grid-area: Categories;
-}
-
-.Search-Results {
-  grid-area: Search-Results;
 }
