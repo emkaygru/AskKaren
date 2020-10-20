@@ -1,16 +1,46 @@
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  color: #011627;
+  background-color: #cfcccc;
+}
+
+h1 {
+  color: #006D77;
+}
+
+h2 {
+  color: #006D77;
+}
+
+h3 {
+  color: #006D77;
 }
 
 
+
+/*
 .ask {
- color: #E29578
+ color: #E29578;
 }
 .karen {
-color:#006D77
+color:#006D77;
 }
+
+*/
+
+.primary {
+  color: #006D77;
+}
+
+.secondary {
+  color: #E29578;
+}
+
+
+
+
 
 
 .grid-container {
@@ -25,6 +55,10 @@ color:#006D77
     ". Search-Results Search-Results";
 }
 
-.Categories { grid-area: Categories; }
+.Categories {
+  grid-area: Categories;
+}
 
-.Search-Results { grid-area: Search-Results; }
+.Search-Results {
+  grid-area: Search-Results;
+}
