@@ -3,7 +3,7 @@
   margin: 0;
   box-sizing: border-box;
   color: #011627;
-  background-color: #cfcccc;
+  background-color: #E8E8E8;
 }
 
 h1 {
@@ -18,24 +18,31 @@ h3 {
   color: #006D77;
 }
 
-
-
-/*
-.ask {
- color: #E29578;
-}
-.karen {
-color:#006D77;
+.btn {
+  background-color: #011627;
 }
 
-*/
+.btn:hover {
+  background-color: #E29578;
+}
+
+.btn:visited {
+  background-color: #006D77;
+}
+
+i {
+  background-color: rgba(0, 0, 0, 0);
+  color: #fff;
+}
 
 .primary {
-  color: #006D77;
+  background-color: #006D77;
+  color: #fff;
 }
 
 .secondary {
-  color: #E29578;
+  background-color: #E29578;
+  color: #fff;
 }
 
 
