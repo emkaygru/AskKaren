@@ -15,7 +15,9 @@ h3 {
   color: #006D77;
 }
 
-
+.container {
+  padding-top: 40px;
+}
 /* Button Styles */
 .btn {
   background-color: #011627;
