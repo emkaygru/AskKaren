@@ -49,3 +49,19 @@ i {
   background-color: #E29578;
   color: #fff;
 }
+
+
+
+
+
+/* ADDED BY ETHAN 10/20/2020 */
+.cities {
+  display: block;
+  text-transform: capitalize;
+  margin-top: 15px;
+  width: 20%;
+}
+
+.hide {
+  display: none;
+}
