@@ -112,8 +112,8 @@ $(".cities-ent").click(function () {
         method: "GET"
     }).then(function (response) {
         console.log(response);
-        // PULL INFO FOR RANDOM RESTAURANT RESTAURANT
-        var randomRestaurant = (Math.floor(Math.random() * 49) + 1);
+        // PULL INFO FOR RANDOM RESTAURANT
+        var randomRestaurant = (Math.floor(Math.random() * 15) + 1);
         console.log(randomRestaurant);
         $("#res-name0").text(response.restaurants[randomRestaurant].restaurant.name);
         $("#res-address0").text(response.restaurants[randomRestaurant].restaurant.location.address);
