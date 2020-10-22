@@ -60,13 +60,13 @@ $(".cities").click(function () {
         $("#res-name1").text(response.restaurants[1].restaurant.name);
         $("#res-address1").text(response.restaurants[1].restaurant.location.address);
         $("#res-rating1").text("Rating: " + response.restaurants[1].restaurant.user_rating.aggregate_rating + " (" + response.restaurants[1].restaurant.user_rating.rating_text + ") - " + response.restaurants[1].restaurant.user_rating.votes + " votes");
-        $("#res-url0").attr("href", response.restaurants[1].restaurant.url);
-        $("#res-url0").html("Link");
+        $("#res-url1").attr("href", response.restaurants[1].restaurant.url);
+        $("#res-url1").html("Link");
         // PULL INFO FOR THIRD RESTAURANT
         $("#res-name2").text(response.restaurants[2].restaurant.name);
         $("#res-address2").text(response.restaurants[2].restaurant.location.address);
         $("#res-rating2").text("Rating: " + response.restaurants[2].restaurant.user_rating.aggregate_rating + " (" + response.restaurants[2].restaurant.user_rating.rating_text + ") - " + response.restaurants[2].restaurant.user_rating.votes + " votes");
-        $("#res-url0").attr("href", response.restaurants[2].restaurant.url);
-        $("#res-url0").text("Link");
+        $("#res-url2").attr("href", response.restaurants[2].restaurant.url);
+        $("#res-url2").text("Link");
     })
 })
