@@ -1,0 +1,1 @@
+/// Helper manager, called git 
