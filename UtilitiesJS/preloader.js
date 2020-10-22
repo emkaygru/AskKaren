@@ -5,13 +5,12 @@ $(document).ready(function (){
     $("#city-button").click(function (event) {
         event.preventDefault(); 
     callSpinner();
-    Tup=setTimeout(clean,1000); // waits 1 second when searching for the city. 
+    Tup=setTimeout(clean,10000); // waits 1 second when searching for the city. //  open to 10 seconds for debugging Rodolfo 
     });
     $(".cities").click(function (event) {
         event.preventDefault(); 
     callSpinner();
-    Tup=setTimeout(clean,1200); // waits 1.2 second when the city is selected for the city. 
-    });
+    Tup=setTimeout(clean,10000); // waits 1.2 second when the city is selected for the city. /open to 10 seconds for debugging Rodolfo
     
     function callSpinner(){
         var diva=$("<div class='preloader-wrapper big active'>");
