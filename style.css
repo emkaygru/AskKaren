@@ -31,6 +31,13 @@ h3 {
   background-color: #006D77;
 }
 
+/* Preloader */
+.preloader {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  z-index: auto;
+}
 
 /* icon styles */
 i {
