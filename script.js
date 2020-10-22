@@ -4,6 +4,13 @@ var cityname;
 var cityid;
 var cityarray = [];
 
+
+function resetCity(){
+  $(".restaurants").each()
+  cityid = "";
+  cityarray = [];
+}
+
 $.ajax({
     url: adviceurl,
     method: "GET",
@@ -14,6 +21,7 @@ $.ajax({
 
 $("#city-button").click(function (event) {
     event.preventDefault();
+    resetCity();
     cityname = $("#city-input").val().trim();
     if (cityname === "") {
         alert("Please enter a city.");
@@ -76,6 +84,7 @@ $(".cities").click(function () {
 // I'M FEELING ENTITLED BUTTON
 $("#entitled-button").click(function (event) {
     event.preventDefault();
+    resetCity();
     cityname = $("#city-input").val().trim();
     if (cityname === "") {
         alert("Please enter a city.");

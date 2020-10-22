@@ -58,7 +58,9 @@ i {
 }
 
 
+/* .identifier{
 
+} */
 
 
 /* ADDED BY ETHAN 10/20/2020 */
@@ -67,6 +69,8 @@ i {
   text-transform: capitalize;
   margin-top: 15px;
   width: 20%;
+  font-family: 'Heebo', sans-serif;
+  font-weight: 600;
 }
 
 .hide {
