@@ -70,3 +70,55 @@ $(".cities").click(function () {
         $("#res-url2").text("Link");
     })
 })
+
+
+
+// I'M FEELING ENTITLED BUTTON
+$("#entitled-button").click(function (event) {
+    event.preventDefault();
+    cityname = $("#city-input").val().trim();
+    if (cityname === "") {
+        alert("Please enter a city.");
+    } else {
+        entitledDisplay();
+    }
+})
+
+async function entitledDisplay() {
+    cityname = $("#city-input").val().trim();
+    var zomatocity = "https://developers.zomato.com/api/v2.1/cities?q=" + cityname + "&apikey=" + zomapikey;
+    await $.ajax({
+        url: zomatocity,
+        method: "GET"
+    }).then(function (response) {
+        console.log(response)
+        $("#city3").attr("data-name", response.location_suggestions[0].id);
+        $("#city3").text(response.location_suggestions[0].name);
+        $("#city4").attr("data-name", response.location_suggestions[1].id);
+        $("#city4").text(response.location_suggestions[1].name);
+        $("#city5").attr("data-name", response.location_suggestions[2].id);
+        $("#city5").text(response.location_suggestions[2].name);
+    })
+}
+
+$(".cities-ent").click(function () {
+    $("#city3").addClass("hide");
+    $("#city4").addClass("hide");
+    $("#city5").addClass("hide");
+    cityid = $(this).attr("data-name");
+    var zomatourl = "https://developers.zomato.com/api/v2.1/search?entity_id=" + cityid + "&entity_type=city&count=50&sort=rating&order=asc&apikey=" + zomapikey;
+    $.ajax({
+        url: zomatourl,
+        method: "GET"
+    }).then(function (response) {
+        console.log(response);
+        // PULL INFO FOR RANDOM RESTAURANT RESTAURANT
+        var randomRestaurant = (Math.floor(Math.random() * 49) + 1);
+        console.log(randomRestaurant);
+        $("#res-name0").text(response.restaurants[randomRestaurant].restaurant.name);
+        $("#res-address0").text(response.restaurants[randomRestaurant].restaurant.location.address);
+        $("#res-rating0").text("Rating: " + response.restaurants[randomRestaurant].restaurant.user_rating.aggregate_rating + " (" + response.restaurants[0].restaurant.user_rating.rating_text + ") - " + response.restaurants[0].restaurant.user_rating.votes + " votes");
+        $("#res-url0").attr("href", response.restaurants[randomRestaurant].restaurant.url);
+        $("#res-url0").text("Link");
+    })
+})
