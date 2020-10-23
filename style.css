@@ -45,7 +45,6 @@ i {
   color: #fff;
 }
 
-
 /* Class Styles */
 .primary {
   background-color: #006D77;
@@ -57,13 +56,15 @@ i {
   color: #fff;
 }
 
-
+.card{
+  border-radius: 3px;
+}
 /* .identifier{
 
 } */
 
 
-/* ADDED BY ETHAN 10/20/2020 */
+/* ADDED BY ETHAN 10/20/2020 EDITED BY COURTNEY 10/22/2020 */
 .cities {
   display: block;
   text-transform: capitalize;
@@ -71,6 +72,12 @@ i {
   width: 20%;
   font-family: 'Heebo', sans-serif;
   font-weight: 600;
+  color: #011627;
+}
+
+.cities:hover {
+  color: #006D77;
+  cursor: pointer;
 }
 
 .hide {

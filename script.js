@@ -4,13 +4,6 @@ var cityname;
 var cityid;
 var cityarray = [];
 
-
-function resetCity(){
-  $(".restaurants").each()
-  cityid = "";
-  cityarray = [];
-}
-
 $.ajax({
     url: adviceurl,
     method: "GET",
@@ -21,7 +14,6 @@ $.ajax({
 
 $("#city-button").click(function (event) {
     event.preventDefault();
-    resetCity();
     cityname = $("#city-input").val().trim();
     if (cityname === "") {
         alert("Please enter a city.");
@@ -38,6 +30,7 @@ async function zomatoDisplay() {
         method: "GET"
     }).then(function (response) {
         console.log(response)
+        showCities();
         $("#city0").attr("data-name", response.location_suggestions[0].id);
         $("#city0").text(response.location_suggestions[0].name);
         $("#city1").attr("data-name", response.location_suggestions[1].id);
@@ -48,9 +41,7 @@ async function zomatoDisplay() {
 }
 
 $(".cities").click(function () {
-    $("#city0").addClass("hide");
-    $("#city1").addClass("hide");
-    $("#city2").addClass("hide");
+    hideCities();
     cityid = $(this).attr("data-name");
     var zomatourl = "https://developers.zomato.com/api/v2.1/search?entity_id=" + cityid + "&entity_type=city&count=5&sort=rating&order=asc&apikey=" + zomapikey;
     $.ajax({
@@ -84,7 +75,6 @@ $(".cities").click(function () {
 // I'M FEELING ENTITLED BUTTON
 $("#entitled-button").click(function (event) {
     event.preventDefault();
-    resetCity();
     cityname = $("#city-input").val().trim();
     if (cityname === "") {
         alert("Please enter a city.");
@@ -101,6 +91,7 @@ async function entitledDisplay() {
         method: "GET"
     }).then(function (response) {
         console.log(response)
+        showCities();
         $("#city3").attr("data-name", response.location_suggestions[0].id);
         $("#city3").text(response.location_suggestions[0].name);
         $("#city4").attr("data-name", response.location_suggestions[1].id);
@@ -111,10 +102,8 @@ async function entitledDisplay() {
 }
 
 $(".cities-ent").click(function () {
-    $("#city3").addClass("hide");
-    $("#city4").addClass("hide");
-    $("#city5").addClass("hide");
     cityid = $(this).attr("data-name");
+    hideCities();
     var zomatourl = "https://developers.zomato.com/api/v2.1/search?entity_id=" + cityid + "&entity_type=city&count=50&sort=rating&order=asc&apikey=" + zomapikey;
     $.ajax({
         url: zomatourl,
@@ -131,3 +120,22 @@ $(".cities-ent").click(function () {
         $("#res-url0").text("Link");
     })
 })
+
+function showCities(){
+    $("#city0").removeClass("hide");
+    $("#city1").removeClass("hide");
+    $("#city2").removeClass("hide");
+    $("#city3").removeClass("hide");
+    $("#city4").removeClass("hide");
+    $("#city5").removeClass("hide");
+}
+
+function hideCities(){
+    $("#city0").addClass("hide");
+    $("#city1").addClass("hide");
+    $("#city2").addClass("hide");
+    $("#city3").addClass("hide");
+    $("#city4").addClass("hide");
+    $("#city5").addClass("hide");
+}
+
