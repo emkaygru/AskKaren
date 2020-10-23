@@ -1,4 +1,4 @@
-///My code $preloader
+///My code $preloader  version 2.0
 
 $(document).ready(function (){
     
@@ -12,7 +12,7 @@ $(document).ready(function (){
         event.preventDefault(); 
     callSpinner();
     Tup=setTimeout(clean,1200); // waits 1.2 second when the city is selected for the city. 
-
+    })
     function callSpinner(){
         var diva=$("<div class='preloader-wrapper big active'>");
         var classes=["spinner-blue'>","spinner-red'>","spinner-yellow'>","spinner-green'>"]
