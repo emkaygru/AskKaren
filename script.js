@@ -79,7 +79,10 @@ $("#entitled-button").click(function (event) {
     if (cityname === "") {
         alert("Please enter a city.");
     } else {
-        entitledDisplay();
+      setTimeout(
+        function(){
+          entitledDisplay();
+        }, 1500);
     }
 })
 
@@ -109,15 +112,18 @@ $(".cities-ent").click(function () {
         url: zomatourl,
         method: "GET"
     }).then(function (response) {
-        console.log(response);
         // PULL INFO FOR RANDOM RESTAURANT
         var randomRestaurant = (Math.floor(Math.random() * 15) + 1);
         console.log(randomRestaurant);
-        $("#res-name0").text(response.restaurants[randomRestaurant].restaurant.name);
+
+              setTimeout(
+        function(){
+                  $("#res-name0").text(response.restaurants[randomRestaurant].restaurant.name);
         $("#res-address0").text(response.restaurants[randomRestaurant].restaurant.location.address);
         $("#res-rating0").text("Rating: " + response.restaurants[randomRestaurant].restaurant.user_rating.aggregate_rating + " (" + response.restaurants[0].restaurant.user_rating.rating_text + ") - " + response.restaurants[0].restaurant.user_rating.votes + " votes");
         $("#res-url0").attr("href", response.restaurants[randomRestaurant].restaurant.url);
         $("#res-url0").text("Link");
+        }, 1500);
     })
 })
 
@@ -139,3 +145,10 @@ function hideCities(){
     $("#city5").addClass("hide");
 }
 
+function resetCities(){
+
+}
+
+function resetRestaurants(){
+  
+}
