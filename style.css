@@ -149,8 +149,8 @@ button.info-display {
 }
 
 .rest-btn{
+  
   background-color:#006D77;
   text-align: center;
-
-
+ padding-left: 10px;
 }
