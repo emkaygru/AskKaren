@@ -21,6 +21,7 @@ h7 {
 p {
   color: #011627;
   font-family: 'Heebo', sans-serif;
+  font-size: 18px;
 }
 
 a {
@@ -98,6 +99,7 @@ button.info-display {
   border-bottom: #006D77 1px solid;
 }
 
+/* city input button styles */
 .citylink-btn{
   color: white; 
   padding: 20px;
@@ -108,7 +110,7 @@ button.info-display {
 .whatever{
   margin: 10px 0px 10px 60px;
 }
-
+/* city input testing/debug styles ^^ */
 /* results window styles*/
 .results-window .card-content{
   font-size: 18px;
