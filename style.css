@@ -4,7 +4,7 @@
   margin: 0;
   box-sizing: border-box;
   color: #011627;
-  background-color: #E8E8E8;
+  background-color: #fff4f0;
 }
 
 
@@ -18,6 +18,12 @@ h3 {
 .container {
   padding-top: 40px;
 }
+
+/*Modal Styles*/
+.mymodal {
+
+}
+
 /* Button Styles */
 .btn {
   background-color: #011627;
@@ -58,14 +64,38 @@ i {
 
 .card{
   border-radius: 3px;
+  background-color: #ebfdff
+}
+
+a.info-display{
+  padding: 10px;
+  margin: 10px 0px 10px 0px;
+
+}
+button.info-display {
+    color: white;
+
 }
 /* .identifier{
 
 } */
 
+/* City Search */
+
+#city-input {
+  border-bottom: #006D77 1px solid;
+}
+
+/* results window styles*/
+.results-window .card-content{
+  font-size: 18px;
+  color: #011627;
+  background-color: #fff4f0;
+}
 
 /* ADDED BY ETHAN 10/20/2020 EDITED BY COURTNEY 10/22/2020 */
 .cities {
+  text-align: center;
   display: block;
   text-transform: capitalize;
   margin-top: 15px;

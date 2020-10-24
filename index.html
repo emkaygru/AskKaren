@@ -26,11 +26,15 @@
 
 <body>
 
+<div class="mymodal" >
+  
+</div>
+
 	<div class="container valign-wrapper center-align ">
 		<!-- jumbotron -->
 		<div class="row">
 			<!-- branded logo -->
-			<img class="brandedLogo" src="assets/askKarenLogo.png" alt="Welcome  Logo" width="50%">
+			<a href="https://www.pinterest.com/bullen0805/minion-memes/" target="_blank"><img class="brandedLogo" src="assets/askKarenLogo.png" alt="Welcome  Logo" width="50%"></a>
 
             <input type="text" placeholder="Search..." id="city-input">
             <!-- Two buttons similar to Google Layout -->
@@ -44,12 +48,12 @@
     <!-- CITY SELECTION DIV - ADDED BY ETHAN, NOT STYLED YET!! -->
     <div class="container center-align">
       <div id="city-selection">
-          <a id="city0" class="cities card-content center-align"></a>
-          <a id="city1" class="cities card-content center-align"></a>
-          <a id="city2" class="cities card-content center-align"></a>
-          <a id="city3" class="cities-ent card-content center-align"></a>
-          <a id="city4" class="cities-ent card-content center-align"></a>
-          <a id="city5" class="cities-ent card-content center-align"></a>
+          <a id="city0" class="cities card-content center-align info-display"></a>
+          <a id="city1" class="cities card-content center-align info-display"></a>
+          <a id="city2" class="cities card-content center-align info-display"></a>
+          <a id="city3" class="cities-ent card-content center-align info-display"></a>
+          <a id="city4" class="cities-ent card-content center-align info-display"></a>
+          <a id="city5" class="cities-ent card-content center-align info-display"></a>
       </div>
     </div>
 
@@ -60,31 +64,31 @@
   </div>
 
     <!-- results box -->
-    <div class="container results-window">
+    <div class="container results-window ">
         <!-- city name -->
         <div id="city-div">
-            <h2 id="city-name"></h2>
+            <h2 id="city-name info-display"></h2>
         </div>
         <!-- restaurants listed in groups of 3 -->
-        <div id="restaurant0" class="res-box card center-align restaurants">
-            <p id="res-name0"></p>
-            <p id="res-address0"></p>
-            <p id="res-rating0"></p>
-            <a id="res-url0" target="_blank"></a>
+        <div id="restaurant0" class="res-box res-entitled card center-align restaurants hide">
+            <p id="res-name0" class="info-display card-content"></p>
+            <p id="res-address0" class="info-display card-content"></p>
+            <p id="res-rating0" class="info-display card-conent"></p>
+            <button class ="btn"><a id="res-url0" target="_blank" class="info-display"></a></button>
         </div>
 
-        <div id="restaurant1" class="res-box card center-align restaurants">
-            <p id="res-name1"</p>
-            <p id="res-address1"></p>
-            <p id="res-rating1"></p>
-            <a id="res-url1" target="_blank"></a>
+        <div id="restaurant1" class="res-box card center-align restaurants hide">
+            <p id="res-name1" class="info-display card-content"></p>
+            <p id="res-address1" class="info-display card-content"></p>
+            <p id="res-rating1" class="info-display card-content"></p>
+             <button class ="btn"><a id="res-url1" target="_blank" class="info-display"></a></button>
         </div>
 
-        <div id="restaurant2" class="res-box card center-align restaurants">
-            <p id="res-name2"></p>
-            <p id="res-address2"></p>
-            <p id="res-rating2"></p>
-            <a id="res-url2" target="_blank"></a>
+        <div id="restaurant2" class="res-box card center-align restaurants hide">
+            <p id="res-name2" class="info-display card-content"></p>
+            <p id="res-address2" class="info-display card-content"></p>
+            <p id="res-rating2" class="info-display card-content"></p>
+             <button class ="btn"><a id="res-url2" target="_blank" class="info-display"></a></button>
         </div>
     </div>
 
@@ -106,8 +110,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="script.js"></script>
+    <script src="./UtilitiesJS/callmgr.js"></script>
     <script src="./UtilitiesJS/preloader.js"></script>
     
 </body>
 
-</html>
+</html>  

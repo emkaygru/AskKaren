@@ -5,11 +5,17 @@
 //      <div class="mymodal"></div>
 
 //  ===================================
-$(document).ready(function (){
-    showModal(); 
-     $(".modal").modal();
+ $(document).ready(function(){
+             showModal();
+                  $('.modal').modal();
+                 $('#modal1').modal('open');
+                $('#cls').click(function(){
+                    $('#modal1').modal('close');                   
+                });
+            });
    
 function showModal(){
+  
     // <!-- Modal Trigger -->
    var maina=$("<a class='waves-effect waves-light btn modal-trigger' href='#modal1'>");
     // <!-- Modal Structure -->
@@ -37,7 +43,7 @@ function showModal(){
             div2.append(div3).append(dv);                     
 $(".mymodal").append(maina).append(div2);
 };
-    })
+    
 
 
     

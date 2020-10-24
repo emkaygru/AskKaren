@@ -4,6 +4,7 @@ var cityname;
 var cityid;
 var cityarray = [];
 
+// BAD ADVICE API CALL
 $.ajax({
     url: adviceurl,
     method: "GET",
@@ -12,16 +13,23 @@ $.ajax({
     }
 });
 
+// SEARCH BUTTON EVENT LISTENER - VALID ENTRY RUNS ZOMATODISPLAY()
 $("#city-button").click(function (event) {
     event.preventDefault();
+    resetData();
     cityname = $("#city-input").val().trim();
     if (cityname === "") {
         alert("Please enter a city.");
     } else {
-        zomatoDisplay();
+      setTimeout(
+        function(){
+          zomatoDisplay();
+        }, 700);
     }
 })
 
+// FUNCTION PULLS INFO FROM TEXT INPUT, GIVES SUGGESTIONS OF 
+// CITIES THAT MATCH YOUR QUERY
 async function zomatoDisplay() {
     cityname = $("#city-input").val().trim();
     var zomatocity = "https://developers.zomato.com/api/v2.1/cities?q=" + cityname + "&apikey=" + zomapikey;
@@ -40,6 +48,7 @@ async function zomatoDisplay() {
     })
 }
 
+// UPON CLICKING YOUR CITY OF CHOICE, POPULATES WITH RESTAURANT INFORMATION
 $(".cities").click(function () {
     hideCities();
     cityid = $(this).attr("data-name");
@@ -49,24 +58,28 @@ $(".cities").click(function () {
         method: "GET"
     }).then(function (response) {
         console.log(response);
-        // PULL INFO FOR FIRST RESTAURANT
-        $("#res-name0").text(response.restaurants[0].restaurant.name);
-        $("#res-address0").text(response.restaurants[0].restaurant.location.address);
-        $("#res-rating0").text("Rating: " + response.restaurants[0].restaurant.user_rating.aggregate_rating + " (" + response.restaurants[0].restaurant.user_rating.rating_text + ") - " + response.restaurants[0].restaurant.user_rating.votes + " votes");
-        $("#res-url0").attr("href", response.restaurants[0].restaurant.url);
-        $("#res-url0").text("Link");
-        // PULL INFO FOR SECOND RESTAURANT
-        $("#res-name1").text(response.restaurants[1].restaurant.name);
-        $("#res-address1").text(response.restaurants[1].restaurant.location.address);
-        $("#res-rating1").text("Rating: " + response.restaurants[1].restaurant.user_rating.aggregate_rating + " (" + response.restaurants[1].restaurant.user_rating.rating_text + ") - " + response.restaurants[1].restaurant.user_rating.votes + " votes");
-        $("#res-url1").attr("href", response.restaurants[1].restaurant.url);
-        $("#res-url1").html("Link");
-        // PULL INFO FOR THIRD RESTAURANT
-        $("#res-name2").text(response.restaurants[2].restaurant.name);
-        $("#res-address2").text(response.restaurants[2].restaurant.location.address);
-        $("#res-rating2").text("Rating: " + response.restaurants[2].restaurant.user_rating.aggregate_rating + " (" + response.restaurants[2].restaurant.user_rating.rating_text + ") - " + response.restaurants[2].restaurant.user_rating.votes + " votes");
-        $("#res-url2").attr("href", response.restaurants[2].restaurant.url);
-        $("#res-url2").text("Link");
+                      setTimeout(
+        function(){
+          showRestaurants();
+          // PULL INFO FOR FIRST RESTAURANT
+          $("#res-name0").text(response.restaurants[0].restaurant.name);
+          $("#res-address0").text(response.restaurants[0].restaurant.location.address);
+          $("#res-rating0").text("Rating: " + response.restaurants[0].restaurant.user_rating.aggregate_rating + " (" + response.restaurants[0].restaurant.user_rating.rating_text + ") - " + response.restaurants[0].restaurant.user_rating.votes + " votes");
+          $("#res-url0").attr("href", response.restaurants[0].restaurant.url);
+          $("#res-url0").text("Link");
+          // PULL INFO FOR SECOND RESTAURANT
+          $("#res-name1").text(response.restaurants[1].restaurant.name);
+          $("#res-address1").text(response.restaurants[1].restaurant.location.address);
+          $("#res-rating1").text("Rating: " + response.restaurants[1].restaurant.user_rating.aggregate_rating + " (" + response.restaurants[1].restaurant.user_rating.rating_text + ") - " + response.restaurants[1].restaurant.user_rating.votes + " votes");
+          $("#res-url1").attr("href", response.restaurants[1].restaurant.url);
+          $("#res-url1").html("Link");
+          // PULL INFO FOR THIRD RESTAURANT
+          $("#res-name2").text(response.restaurants[2].restaurant.name);
+          $("#res-address2").text(response.restaurants[2].restaurant.location.address);
+          $("#res-rating2").text("Rating: " + response.restaurants[2].restaurant.user_rating.aggregate_rating + " (" + response.restaurants[2].restaurant.user_rating.rating_text + ") - " + response.restaurants[2].restaurant.user_rating.votes + " votes");
+          $("#res-url2").attr("href", response.restaurants[2].restaurant.url);
+          $("#res-url2").text("Link");
+        }, 700);
     })
 })
 
@@ -75,6 +88,7 @@ $(".cities").click(function () {
 // I'M FEELING ENTITLED BUTTON
 $("#entitled-button").click(function (event) {
     event.preventDefault();
+    resetData();
     cityname = $("#city-input").val().trim();
     if (cityname === "") {
         alert("Please enter a city.");
@@ -82,10 +96,12 @@ $("#entitled-button").click(function (event) {
       setTimeout(
         function(){
           entitledDisplay();
-        }, 1500);
+        }, 700);
     }
 })
 
+// FUNCTION PULLS INFO FROM TEXT INPUT, GIVES SUGGESTIONS OF 
+// CITIES THAT MATCH YOUR QUERY - FOR ENTITLED BUTTON
 async function entitledDisplay() {
     cityname = $("#city-input").val().trim();
     var zomatocity = "https://developers.zomato.com/api/v2.1/cities?q=" + cityname + "&apikey=" + zomapikey;
@@ -104,6 +120,8 @@ async function entitledDisplay() {
     })
 }
 
+// UPON CLICKING YOUR CHOICE OF CITY, DISPLAYS INFO FOR A RANDOM 
+// RESTAURANT FROM A LIST OF THE 16 WORST RESTAURANTS IN YOUR AREA
 $(".cities-ent").click(function () {
     cityid = $(this).attr("data-name");
     hideCities();
@@ -115,40 +133,54 @@ $(".cities-ent").click(function () {
         // PULL INFO FOR RANDOM RESTAURANT
         var randomRestaurant = (Math.floor(Math.random() * 15) + 1);
         console.log(randomRestaurant);
-
               setTimeout(
         function(){
-                  $("#res-name0").text(response.restaurants[randomRestaurant].restaurant.name);
-        $("#res-address0").text(response.restaurants[randomRestaurant].restaurant.location.address);
-        $("#res-rating0").text("Rating: " + response.restaurants[randomRestaurant].restaurant.user_rating.aggregate_rating + " (" + response.restaurants[0].restaurant.user_rating.rating_text + ") - " + response.restaurants[0].restaurant.user_rating.votes + " votes");
-        $("#res-url0").attr("href", response.restaurants[randomRestaurant].restaurant.url);
-        $("#res-url0").text("Link");
-        }, 1500);
+          showEntitled();
+          $("#res-name0").text(response.restaurants[randomRestaurant].restaurant.name);
+          $("#res-address0").text(response.restaurants[randomRestaurant].restaurant.location.address);
+          $("#res-rating0").text("Rating: " + response.restaurants[randomRestaurant].restaurant.user_rating.aggregate_rating + " (" + response.restaurants[0].restaurant.user_rating.rating_text + ") - " + response.restaurants[0].restaurant.user_rating.votes + " votes");
+          $("#res-url0").attr("href", response.restaurants[randomRestaurant].restaurant.url);
+          $("#res-url0").text("Link");
+        }, 700);
     })
 })
 
+// REMOVES THE 'HIDE' CLASS FOR THE CITY SELECTION
 function showCities(){
-    $("#city0").removeClass("hide");
-    $("#city1").removeClass("hide");
-    $("#city2").removeClass("hide");
-    $("#city3").removeClass("hide");
-    $("#city4").removeClass("hide");
-    $("#city5").removeClass("hide");
+  $(".cities").each(function(){
+    $(this).removeClass("hide");
+  })
+  $(".cities-ent").each(function(){
+    $(this).removeClass("hide");
+  })
 }
 
+// ADDS THE 'HIDE' CLASS FOR THE CITY SELECTION
 function hideCities(){
-    $("#city0").addClass("hide");
-    $("#city1").addClass("hide");
-    $("#city2").addClass("hide");
-    $("#city3").addClass("hide");
-    $("#city4").addClass("hide");
-    $("#city5").addClass("hide");
+  $(".cities").each(function(){
+    $(this).addClass("hide");
+  })
+  $(".cities-ent").each(function(){
+    $(this).addClass("hide");
+  })
 }
 
-function resetCities(){
-
+// REMOVES THE 'HIDE' CLASS FOR RESTAURANT INFO DIVS
+function showRestaurants(){
+  $(".res-box").each(function(){
+    $(this).removeClass("hide");
+  })
 }
 
-function resetRestaurants(){
-  
+// REMOVES THE 'HIDE' CLASS FOR FIRST RESTAURANT DIV, FOR ENTITLED BUTTON
+function showEntitled(){
+  $(".res-entitled").removeClass("hide");
+}
+
+// SETS THE TEXT VALUE FOR EACH ITEM RESULTED WITH INFO-DISPLAY CLASS
+// WHICH IS ALL THE DATA FROM THE ZOMATO API - RESETS EVERYTHING
+function resetData(){
+  $(".info-display").each(function(){
+    $(this).text("");
+  })
 }
