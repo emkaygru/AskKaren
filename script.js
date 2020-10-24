@@ -17,15 +17,13 @@ $.ajax({
 
 // SEARCH BUTTON EVENT LISTENER - VALID ENTRY RUNS ZOMATODISPLAY()
 $("#city-button").click(function (event) {
-    $("#city0").removeClass('hide');
-    $("#city1").removeClass('hide');
-    $("#city2").removeClass('hide');
     event.preventDefault();
     resetData();
     cityname = $("#city-input").val().trim();
     if (cityname === "") {
         alert("Please enter a city.");
     } else {
+      hideCities();
       setTimeout(
         function(){
           zomatoDisplay();
@@ -95,15 +93,13 @@ $(".cities").click(function () {
 
 // I'M FEELING ENTITLED BUTTON
 $("#entitled-button").click(function (event) {
-  $("#city3").removeClass('hide');
-    $("#city4").removeClass('hide');
-    $("#city5").removeClass('hide');
     event.preventDefault();
     resetData();
     cityname = $("#city-input").val().trim();
     if (cityname === "") {
         alert("Please enter a city.");
     } else {
+      hideCities();
       setTimeout(
         function(){
           entitledDisplay();
@@ -121,7 +117,8 @@ async function entitledDisplay() {
         method: "GET"
     }).then(function (response) {
         console.log(response)
-        showCities();
+        hideCities();
+        showEntitledCities();
         $("#city3").attr("data-name", response.location_suggestions[0].id);
         $("#city3").text(response.location_suggestions[0].name);
         $("#city4").attr("data-name", response.location_suggestions[1].id);
@@ -161,6 +158,9 @@ function showCities(){
   $(".cities").each(function(){
     $(this).removeClass("hide");
   })
+}
+
+function showEntitledCities(){
   $(".cities-ent").each(function(){
     $(this).removeClass("hide");
   })

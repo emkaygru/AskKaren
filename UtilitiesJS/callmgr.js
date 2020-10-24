@@ -17,14 +17,14 @@
 function showModal(){
   
     // <!-- Modal Trigger -->
-   var maina=$("<a class='waves-effect waves-light btn modal-trigger' href='#modal1'>");
+   var maina=$("<a class='waves-effect waves-light btn modal-trigger modal-btn' href='#modal1'><i class='fad fa-question question'></i>");
     // <!-- Modal Structure -->
     var div2=$("<div id='modal1' class='modal modal-fixed-footer'>")
       var div3=$("<div class='modal-content'>")
             //tex structure goes here  
            var h4=$("<h4>Welcome to askKaren!</h4>"); // modal title goes here 
            var spc1=$("<p>");// break space 
-           var txt1=$("<p class='modaltext'> Here, you can search for restaurants near you! But not just any restaurant - only the lowest rated restaurants near you. We know, as a Karen, you expect only the best for you and your family and because of this, we only show you the lowest rated places near you. View the low score, click on the link the view the restaurant’s website and easily click a button to speak with a manager.</p>");
+           var txt1=$("<p class='modaltext'> Here, you can search for restaurants near you! But not just any restaurant - only the lowest rated restaurants in your city. We know, as a Karen, you expect only the best for you and your family and because of this, we only show you the lowest rated places so that you can either avoid them or visit them (depending on how you feel). View the low score, click on the link the view the restaurant’s website and easily click a button to speak with a manager.</p>");
            var spc2=$("<p>");// break space 
            var h7=$("<h7>We built this app with you in mind.</h7>");
            var spc3=$("<p>");// break space

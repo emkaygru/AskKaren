@@ -17,7 +17,9 @@ h7 {
   color: #006D77;
   font-family: 'Noto Serif JP', serif;
 }
+/* End Heading Styles */
 
+/* General Selector Styles */
 p {
   color: #011627;
   font-family: 'Heebo', sans-serif;
@@ -27,15 +29,26 @@ p {
 a {
   font-family: 'Heebo', sans-serif;
 }
+/* End */
 
 .container {
   padding-top: 40px;
 }
 
 /*Modal Styles*/
-.mymodal {
+.modal-btn {
+  background-color: #fff4f0!important;
 
 }
+
+.modal-btn:hover{
+  background-color: #E29578!important;
+}
+
+.question{
+  color:#011627;
+}
+/* End Modal Styles */
 
 /* Button Styles */
 .btn {
@@ -56,7 +69,13 @@ a {
   left: 50%;
   top: 50%;
   z-index: auto;
+  color: #006D77!important;
+ 
 }
+
+.circle{
+   color:  #006D77!important;
+} 
 
 /* icon styles */
 i {
@@ -111,8 +130,8 @@ button.info-display {
   padding: 20px;
   background-color:  #006D77;
   text-align: center; 
-
 }
+
 .whatever{
   margin: 10px 0px 10px 60px;
 }
@@ -130,17 +149,16 @@ button.info-display {
 /* ADDED BY ETHAN 10/20/2020 EDITED BY COURTNEY 10/22/2020 */
 .cities {
   text-align: center;
-  display: block;
   text-transform: capitalize;
   margin-top: 15px;
   width: 20%;
   font-family: 'Heebo', sans-serif;
   font-weight: 600;
-  color: #011627;
 }
 
 .cities:hover {
-  color: #006D77;
+  color: white;
+  background-color:  #E29578;
   cursor: pointer;
 }
 
@@ -154,3 +172,17 @@ button.info-display {
   text-align: center;
  padding-left: 10px;
 }
+
+
+/* ad styles*/
+
+.adSource {
+  position: relative;
+  z-index: 1;
+  top: 20px;
+  left: 10px;
+  background: #eee;
+  overflow-x: hidden;
+  padding: 8px 0;
+}
+

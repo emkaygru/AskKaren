@@ -29,13 +29,14 @@ $(document).ready(function (){
             div7.append(div8);
             div2.append(div3).append(div5).append(div7);
             diva.append(div2)
+            $(".preloader").append(diva);
         }
-        $(".preloader").append(diva);
+        
     
     }
     
     function clean() {
-        $(".preloader-wrapper").empty();
+        $(".preloader").empty();
     }
     
     });
