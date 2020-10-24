@@ -1,3 +1,5 @@
+// The Karen's Heart    - Main js File rev 2.0 
+
 var adviceurl = "https://cors-anywhere.herokuapp.com/https://badadvice.rest/api/random";
 var zomapikey = "eca5d70af5955828b5479ffeed90193f";
 var cityname;

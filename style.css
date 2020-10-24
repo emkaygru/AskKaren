@@ -11,8 +11,20 @@
 /* Headings Styles */
 h1,
 h2,
-h3 {
+h3,
+h4,
+h7 {
   color: #006D77;
+  font-family: 'Noto Serif JP', serif;
+}
+
+p {
+  color: #011627;
+  font-family: 'Heebo', sans-serif;
+}
+
+a {
+  font-family: 'Heebo', sans-serif;
 }
 
 .container {
@@ -84,6 +96,17 @@ button.info-display {
 
 #city-input {
   border-bottom: #006D77 1px solid;
+}
+
+.citylink-btn{
+  color: white; 
+  padding: 20px;
+  background-color:  #006D77;
+  text-align: center; 
+
+}
+.whatever{
+  margin: 10px 0px 10px 60px;
 }
 
 /* results window styles*/
