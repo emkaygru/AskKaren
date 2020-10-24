@@ -78,6 +78,7 @@ i {
 .card{
   border-radius: 3px;
   background-color: #ebfdff
+
 }
 
 a.info-display{
@@ -99,6 +100,11 @@ button.info-display {
   border-bottom: #006D77 1px solid;
 }
 
+.card-action{
+  background-color:#011627!important;
+}
+
+
 /* city input button styles */
 .citylink-btn{
   color: white; 
@@ -114,10 +120,13 @@ button.info-display {
 /* results window styles*/
 .results-window .card-content{
   font-size: 18px;
-  color: #011627;
-  background-color: #fff4f0;
+
+  background-color:  #011627;
 }
 
+#bad-advice{
+  padding: 60px 0px 40px 0px;
+}
 /* ADDED BY ETHAN 10/20/2020 EDITED BY COURTNEY 10/22/2020 */
 .cities {
   text-align: center;
@@ -137,4 +146,11 @@ button.info-display {
 
 .hide {
   display: none;
+}
+
+.rest-btn{
+  background-color:#006D77;
+  text-align: center;
+
+
 }

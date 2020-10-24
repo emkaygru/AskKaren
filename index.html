@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 
 <!-- Header -->
@@ -9,9 +9,11 @@
 	<title>askKaren</title>
 	<!-- JQuery Ajax Library -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+
 	</script>
 	<!-- Font Awesome -->
 	<script src="https://kit.fontawesome.com/12d7b13aed.js" crossorigin="anonymous">
+
 	</script>
 	<!-- Materialize Library -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -26,9 +28,9 @@
 
 <body>
 
-<div class="mymodal">
-  
-</div>
+	<div class="mymodal">
+
+	</div>
 
 	<div class="container valign-wrapper center-align ">
 		<!-- jumbotron -->
@@ -49,9 +51,9 @@
     <div class="container valign-wrapper center-align">
       <div id="city-selection">
         <div class="row whatever">
-          <a id="city0" class="cities center-align info-display citylink-btn"></a>
-          <a id="city1" class="cities center-align info-display citylink-btn"></a>
-          <a id="city2" class="cities center-align info-display citylink-btn"></a>
+          <a id="city0" class="cities center-align info-display citylink-btn hide"></a>
+          <a id="city1" class="cities center-align info-display citylink-btn hide"></a>
+          <a id="city2" class="cities center-align info-display citylink-btn hide"></a>
           <a id="city3" class="cities-ent center-align info-display citylink-btn"></a>
           <a id="city4" class="cities-ent center-align info-display citylink-btn"></a>
           <a id="city5" class="cities-ent center-align info-display citylink-btn"></a>
@@ -73,25 +75,30 @@
         </div>
         <!-- restaurants listed in groups of 3 -->
         <div id="restaurant0" class="res-box res-entitled card center-align restaurants hide">
-            <p id="res-name0" class="info-display card-content card-title"></p>
-            <p id="res-address0" class="info-display card-content"></p>
-            <p id="res-rating0" class="info-display card-conent"></p>
+            <p id="res-name0" class="info-display card-content card-title white-text"></p>
+            <p id="res-address0" class="info-display card-content white-text"></p>
+            <p id="res-rating0" class="info-display card-content white-text"></p>
             <div class="card-action">
-            <button class ="btn"><a id="res-url0" target="_blank" class="info-display"></a></button></div>
+              <button class ="btn rest-btn"><a id="res-url0" target="_blank" class="info-display white-text"><i class="far fa-phone"></i></a></button>
+            </div>
         </div>
 
         <div id="restaurant1" class="res-box card center-align restaurants hide">
-            <p id="res-name1" class="info-display card-content card-title"></p>
-            <p id="res-address1" class="info-display card-content"></p>
-            <p id="res-rating1" class="info-display card-content"></p>
-             <button class ="btn"><a id="res-url1" target="_blank" class="info-display"></a></button>
+            <p id="res-name1" class="info-display card-content card-title white-text"></p>
+            <p id="res-address1" class="info-display card-content white-text"></p>
+            <p id="res-rating1" class="info-display card-content white-text"></p>
+            <div class="card-action center-align">
+              <button class ="btn rest-btn"><a id="res-url1" target="_blank" class="info-display white-text"></a></button>
+             </div>
         </div>
 
         <div id="restaurant2" class="res-box card center-align restaurants hide">
-            <p id="res-name2" class="info-display card-content card-title"></p>
-            <p id="res-address2" class="info-display card-content"></p>
-            <p id="res-rating2" class="info-display card-content"></p>
-             <button class ="btn"><a id="res-url2" target="_blank" class="info-display"></a></button>
+            <p id="res-name2" class="info-display card-content card-title white-text"></p>
+            <p id="res-address2" class="info-display card-content white-text"></p>
+            <p id="res-rating2" class="info-display card-content white-text"></p>
+            <div class="card-action center-align">
+              <button class ="btn rest-btn"><a id="res-url2" target="_blank" class="info-display white-text"></a></button>
+             </div>
         </div>
     </div>
 
@@ -102,7 +109,7 @@
 
     <!-- footer -->
     <footer>
-        <div id="info"></div>
+        
         <!-- Stereotypical Statement that all Karens like -->
         <!-- on load the Live, laugh love will show and then on search, the toggle will hide and show the bad advice API in the footer -->
         <p id="bad-advice" class="center-align"></p>
@@ -119,4 +126,4 @@
     
 </body>
 
-</html>  
+</html>

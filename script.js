@@ -17,6 +17,9 @@ $.ajax({
 
 // SEARCH BUTTON EVENT LISTENER - VALID ENTRY RUNS ZOMATODISPLAY()
 $("#city-button").click(function (event) {
+    $("#city0").removeClass('hide')
+    $("#city1")
+    $("#city2")
     event.preventDefault();
     resetData();
     cityname = $("#city-input").val().trim();
@@ -68,19 +71,20 @@ $(".cities").click(function () {
           $("#res-address0").text(response.restaurants[0].restaurant.location.address);
           $("#res-rating0").text("Rating: " + response.restaurants[0].restaurant.user_rating.aggregate_rating + " (" + response.restaurants[0].restaurant.user_rating.rating_text + ") - " + response.restaurants[0].restaurant.user_rating.votes + " votes");
           $("#res-url0").attr("href", response.restaurants[0].restaurant.url);
-          $("#res-url0").text("Link");
+          $("#res-url0").text("Speak to a Manager");
+          $("#res-url0").append(<i class="far fa-phone"></i>);
           // PULL INFO FOR SECOND RESTAURANT
           $("#res-name1").text(response.restaurants[1].restaurant.name);
           $("#res-address1").text(response.restaurants[1].restaurant.location.address);
           $("#res-rating1").text("Rating: " + response.restaurants[1].restaurant.user_rating.aggregate_rating + " (" + response.restaurants[1].restaurant.user_rating.rating_text + ") - " + response.restaurants[1].restaurant.user_rating.votes + " votes");
           $("#res-url1").attr("href", response.restaurants[1].restaurant.url);
-          $("#res-url1").html("Link");
+          $("#res-url1").text("Speak to a Manager");
           // PULL INFO FOR THIRD RESTAURANT
           $("#res-name2").text(response.restaurants[2].restaurant.name);
           $("#res-address2").text(response.restaurants[2].restaurant.location.address);
           $("#res-rating2").text("Rating: " + response.restaurants[2].restaurant.user_rating.aggregate_rating + " (" + response.restaurants[2].restaurant.user_rating.rating_text + ") - " + response.restaurants[2].restaurant.user_rating.votes + " votes");
           $("#res-url2").attr("href", response.restaurants[2].restaurant.url);
-          $("#res-url2").text("Link");
+          $("#res-url2").text("Speak to a Manager");
         }, 700);
     })
 })
@@ -142,7 +146,7 @@ $(".cities-ent").click(function () {
           $("#res-address0").text(response.restaurants[randomRestaurant].restaurant.location.address);
           $("#res-rating0").text("Rating: " + response.restaurants[randomRestaurant].restaurant.user_rating.aggregate_rating + " (" + response.restaurants[0].restaurant.user_rating.rating_text + ") - " + response.restaurants[0].restaurant.user_rating.votes + " votes");
           $("#res-url0").attr("href", response.restaurants[randomRestaurant].restaurant.url);
-          $("#res-url0").text("Link");
+          $("#res-url0").text("Speak to a Manager");
         }, 700);
     })
 })
