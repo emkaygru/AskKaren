@@ -1,4 +1,4 @@
-// The Karen's Heart    - Main js File rev 2.0 
+// The Karen's Heart    - Main js File rev 2.0
 
 var adviceurl = "https://cors-anywhere.herokuapp.com/https://badadvice.rest/api/random";
 var zomapikey = "eca5d70af5955828b5479ffeed90193f";
@@ -31,7 +31,7 @@ $("#city-button").click(function (event) {
     }
 })
 
-// FUNCTION PULLS INFO FROM TEXT INPUT, GIVES SUGGESTIONS OF 
+// FUNCTION PULLS INFO FROM TEXT INPUT, GIVES SUGGESTIONS OF
 // CITIES THAT MATCH YOUR QUERY
 async function zomatoDisplay() {
     cityname = $("#city-input").val().trim();
@@ -107,7 +107,7 @@ $("#entitled-button").click(function (event) {
     }
 })
 
-// FUNCTION PULLS INFO FROM TEXT INPUT, GIVES SUGGESTIONS OF 
+// FUNCTION PULLS INFO FROM TEXT INPUT, GIVES SUGGESTIONS OF
 // CITIES THAT MATCH YOUR QUERY - FOR ENTITLED BUTTON
 async function entitledDisplay() {
     cityname = $("#city-input").val().trim();
@@ -128,7 +128,7 @@ async function entitledDisplay() {
     })
 }
 
-// UPON CLICKING YOUR CHOICE OF CITY, DISPLAYS INFO FOR A RANDOM 
+// UPON CLICKING YOUR CHOICE OF CITY, DISPLAYS INFO FOR A RANDOM
 // RESTAURANT FROM A LIST OF THE 16 WORST RESTAURANTS IN YOUR AREA
 $(".cities-ent").click(function () {
     cityid = $(this).attr("data-name");
@@ -149,6 +149,7 @@ $(".cities-ent").click(function () {
           $("#res-rating0").text("Rating: " + response.restaurants[randomRestaurant].restaurant.user_rating.aggregate_rating + " (" + response.restaurants[0].restaurant.user_rating.rating_text + ") - " + response.restaurants[0].restaurant.user_rating.votes + " votes");
           $("#res-url0").attr("href", response.restaurants[randomRestaurant].restaurant.url);
           $("#res-url0").text("Speak to a Manager");
+          $("#res-url0").prepend("<i class='far fa-phone'></i> ");
         }, 700);
     })
 })

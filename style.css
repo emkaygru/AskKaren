@@ -70,12 +70,12 @@ a {
   top: 50%;
   z-index: auto;
   color: #006D77!important;
- 
+
 }
 
 .circle{
    color:  #006D77!important;
-} 
+}
 
 /* icon styles */
 i {
@@ -102,7 +102,7 @@ i {
 
 a.info-display{
   padding: 10px;
-  margin: 10px 0px 10px 0px;
+  margin: 10px 0 10px 0;
 
 }
 button.info-display {
@@ -126,14 +126,14 @@ button.info-display {
 
 /* city input button styles */
 .citylink-btn{
-  color: white; 
+  color: white;
   padding: 20px;
   background-color:  #006D77;
-  text-align: center; 
+  text-align: center;
 }
 
 .whatever{
-  margin: 10px 0px 10px 60px;
+  margin: 10px 0 10px 60px;
 }
 /* city input testing/debug styles ^^ */
 /* results window styles*/
@@ -144,7 +144,7 @@ button.info-display {
 }
 
 #bad-advice{
-  padding: 60px 0px 40px 0px;
+  padding: 60px 0 40px 0;
 }
 /* ADDED BY ETHAN 10/20/2020 EDITED BY COURTNEY 10/22/2020 */
 .cities {
@@ -167,10 +167,10 @@ button.info-display {
 }
 
 .rest-btn{
-  
-  background-color:#006D77;
+
+  background-color: #006D77;
   text-align: center;
- padding-left: 10px;
+  padding-left: 10px;
 }
 
 
@@ -186,3 +186,6 @@ button.info-display {
   padding: 8px 0;
 }
 
+#adBox {
+  background-color: rgba(0, 0, 0, 0);
+}
