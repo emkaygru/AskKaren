@@ -6,7 +6,7 @@
 
 //  ===================================
  $(document).ready(function(){
-        var maina=$("<a id='mod' class='waves-effect waves-light btn modal-trigger' href='#modal1'><i class='fad fa-question question'></i>")
+        var maina=$("<a id='mod' class='waves-effect waves-light btn modal-trigger modal-btn' href='#modal1'><i class='fad fa-question question'></i>")
     $(".mymodal").append(maina) 
        $("#mod").click(function (){
             showModal(); 
@@ -36,11 +36,11 @@ function showModal(){
            var li3=$("<li>View the top 5 lowest rated restaurants closest to you</li>");
            var li4=$("<li>And click to view more information about that restaurant</li>");
            var dv=$("<div class='modal-footer'>");
-           var aa1=$("<a href='#!' id='yei' class='modal-close waves-effect waves-green btn-flat'>Agree</a>"); // Agree</a>
-           var aa2=$("<a href='#!' id='nah' class='modal-close waves-effect waves-green btn-flat'>Disagree</a>"); // disagree</a>
+           var aa1=$("<a href='#!' id='yei' class='modal-close waves-effect waves-green btn-flat'>Ok</a>"); // Agree</a>
+           
             div3.append(h4).append(spc1).append(txt1).append(spc2).append(h7).append(spc3).append(spc4).append(ol1);
             ol1.append(li1).append(li2).append(li3).append(li4);
-            dv.append(aa1).append(aa2);
+            dv.append(aa1);
             div2.append(div3).append(dv);
             $(".mymodal").append(div2);   
  };
