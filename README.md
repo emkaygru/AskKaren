@@ -5,7 +5,7 @@ Here, you can search for restaurants near you! But not just any restaurant - onl
 We built this app with you in mind.
 
 ```bash
-https://askkaren.fuckdonaldtrump.repl.co/
+https://emkaygru.github.io/AskKaren/
 ```
 
 ## Usage
