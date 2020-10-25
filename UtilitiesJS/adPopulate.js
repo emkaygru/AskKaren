@@ -22,8 +22,8 @@ var pic4 = "assets/FaithsFaithful.png";
 selectPic();
 
 function selectPic(){ 
-  $("#myPicture1").attr("src", ("../assets/pic" + randnum));
+  $("#myPicture1").attr("src", ("../assets/pic" + randnum +".png"));
   // console.log(picTitle);
-  $("#myPicture2").attr("src", ("../assets/pic" + randnum));
+  $("#myPicture2").attr("src", ("../assets/pic" + randnum + ".png"));
   // console.log(picTitle);
 }
