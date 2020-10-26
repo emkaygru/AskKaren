@@ -24,19 +24,19 @@ Project includes usage of:
 
 ## Images of Site in Use
 
-![img] (assets/opensearch.png)
+![img] (./assets/opensearch.png)
   This is an open search and is what our users are greeted with upon entering the site, including the branded logo, a search bar, two buttons, a randomized ad, and a bad advice quote at the bottom to spice up anyday. 
-![img] (assets/welcomemodal.png)
+![img] (./assets/welcomemodal.png)
   If the user clicks the question mark in the top right corner of the window, they are given a pop-up of sorts, that walk them through the purpose of the site and what they are capable of accomplishing with this tool. 
-![img] (assets/smartsearchresults.png)
+![img] (./assets/smartsearchresults.png)
   The API uses a smart search to locate the user's designated city of choice. 
-![img] (assets/topthreeresults.png)
+![img] (./assets/topthreeresults.png)
   Our users will see a three container window after they have selected their city from the previous choices. 
-![img] (assets/speaktomanagerlink.png)
+![img] (./assets/speaktomanagerlink.png)
   Clicking on the speak to manager button within the search results, will take the user to a new window with the contact and restuarant information on Zomato.
-![img] (assets/feelingEntitledresult.png)
+![img] (./assets/feelingEntitledresult.png)
   Clicking the 'I'm feeling entitled' button yields a single result chosen at random from our advanced API.
-![img] (assets/askKarenLogo.png)
+![img] (./assets/askKarenLogo.png)
   If the user chooses to click our logo, they will be greeted by a lovely video!
 
 ## Contributing

@@ -14,17 +14,15 @@
 
 var randnum = (Math.floor(Math.random() *5) + 1);
 
-var pic1 = "assets/AlcoholicAnonymous.png";
-var pic2 = "assets/BeckysHOA.png";
-var pic3 = "assets/eye-spy.png";
-var pic4 = "assets/FaithsFaithful.png";
-var pic5 = "assets/pic5.png"
+var pic1 = "./assets/pic1.png";
+var pic2 = "./assets/pic2.png";
+var pic3 = "./assets/pic3.png";
+var pic4 = "./assets/pic4.png";
+var pic5 = "./assets/pic5.png"
 
 selectPic();
 
 function selectPic(){ 
-  $("#myPicture1").attr("src", ("../assets/pic" + randnum +".png"));
-  // console.log(picTitle);
-  $("#myPicture2").attr("src", ("../assets/pic" + randnum + ".png"));
+  $("#myPicture1").attr("src", ("./assets/pic" + randnum +".png"));
   // console.log(picTitle);
 }
