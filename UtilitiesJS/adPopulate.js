@@ -12,12 +12,13 @@
 //      $("#myPicture2").attr("src", myPix[b]);
 // }
 
-var randnum = (Math.floor(Math.random() *4) + 1);
+var randnum = (Math.floor(Math.random() *5) + 1);
 
 var pic1 = "assets/AlcoholicAnonymous.png";
 var pic2 = "assets/BeckysHOA.png";
 var pic3 = "assets/eye-spy.png";
 var pic4 = "assets/FaithsFaithful.png";
+var pic5 = "assets/pic5.png"
 
 selectPic();
 

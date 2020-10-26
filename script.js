@@ -55,7 +55,6 @@ async function zomatoDisplay() {
 // UPON CLICKING YOUR CITY OF CHOICE, POPULATES WITH RESTAURANT INFORMATION
 $(".cities").click(function () {
     hideCities();
-    hideRestaurants();
     cityid = $(this).attr("data-name");
     var zomatourl = "https://developers.zomato.com/api/v2.1/search?entity_id=" + cityid + "&entity_type=city&count=5&sort=rating&order=asc&apikey=" + zomapikey;
     $.ajax({
@@ -178,6 +177,7 @@ function hideCities(){
   $(".cities-ent").each(function(){
     $(this).addClass("hide");
   })
+
 }
 
 // REMOVES THE 'HIDE' CLASS FOR RESTAURANT INFO DIVS
@@ -196,9 +196,8 @@ function hideRestaurants(){
 
 // REMOVES THE 'HIDE' CLASS FOR FIRST RESTAURANT DIV, FOR ENTITLED BUTTON
 function showEntitled(){
-  $(".res-entitled").removeClass("hide");
-  $("#restaurant1").empty();  
-  $("#restaurant2").empty();
+  $("#restaurant0").removeClass("hide");
+
 
 }
 
