@@ -25,16 +25,16 @@ function showModal(){
             //text structure goes here
            var h4=$("<h4>Welcome to askKaren!</h4>"); // modal title goes here
            var spc1=$("<p>");// break space
-           var txt1=$("<p class='modaltext'> Here, you can search for restaurants near you! But not just any restaurant - only the lowest rated restaurants near you. We know, as a Karen, you expect only the best for you and your family and because of this, we only show you the lowest rated places near you. View the low score, click on the link the view the restaurant’s website and easily click a button to speak with a manager.</p>");
+           var txt1=$("<p class='modaltext'> Here, you can search for restaurants near you! Not just any restaurant - only the lowest-rated restaurants near you. We know, as a Karen, you expect the worst of anyone other than you and your family. Because of this, we only show you the lowest-rated places near you where it would be appropriate to speak to the manager. View the low score, click on the link the view the restaurant’s website and easily click a button to speak with a manager.</p>");
            var spc2=$("<p>");// break space
-           var h7=$("<h7>We built this app with you in mind.</h7>");
+           var h7=$("<p>We built this app with you in mind.</p>");
            var spc3=$("<p>");// break space
            var spc4=$("<p>");// break space
            var ol1=$("<ol type='a'>");
            var li1=$("<li>Search for your city</li>");
-           var li2=$("<li>Click on Your city</li>");
-           var li3=$("<li>View the top 5 lowest rated restaurants closest to you</li>");
-           var li4=$("<li>And click to view more information about that restaurant</li>");
+           var li2=$("<li>Choose your city from the provided list</li>");
+           var li3=$("<li>View the three lowest-rated restaurants closest to you</li>");
+           var li4=$("<li>Click the link to view more information about that restaurant</li>");
            var dv=$("<div class='modal-footer'>");
            var aa1=$("<a href='#!' id='yei' class='modal-close waves-effect waves-green btn-flat'>This Offends Me</a>"); // Agree</a>
            

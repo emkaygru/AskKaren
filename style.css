@@ -32,6 +32,12 @@ p {
 a {
   font-family: 'Heebo', sans-serif;
 }
+
+li {
+  color: #011627;
+  font-family: 'Heebo', sans-serif;
+  font-size: 18px;
+}
 /* End */
 
 .container {

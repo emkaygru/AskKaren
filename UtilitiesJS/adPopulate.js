@@ -12,7 +12,8 @@
 //      $("#myPicture2").attr("src", myPix[b]);
 // }
 
-var randnum = (Math.floor(Math.random() *5) + 1);
+var randnum1 = (Math.floor(Math.random() *2) + 1);
+var randnum2 = (Math.floor(Math.random() *3) + 3);
 
 var pic1 = "./assets/pic1.png";
 var pic2 = "./assets/pic2.png";
@@ -20,9 +21,6 @@ var pic3 = "./assets/pic3.png";
 var pic4 = "./assets/pic4.png";
 var pic5 = "./assets/pic5.png"
 
-selectPic();
 
-function selectPic(){ 
-  $("#myPicture1").attr("src", ("./assets/pic" + randnum +".png"));
-  // console.log(picTitle);
-}
+$("#myPicture1").attr("src", ("./assets/pic" + randnum1 +".png"));
+$("#myPicture2").attr("src", ("./assets/pic" + randnum2 +".png"));
