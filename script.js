@@ -42,6 +42,7 @@ async function zomatoDisplay() {
     }).then(function (response) {
         console.log(response)
         showCities();
+        hideRestaurants();
         $("#city0").attr("data-name", response.location_suggestions[0].id);
         $("#city0").text(response.location_suggestions[0].name);
         $("#city1").attr("data-name", response.location_suggestions[1].id);
@@ -54,6 +55,7 @@ async function zomatoDisplay() {
 // UPON CLICKING YOUR CITY OF CHOICE, POPULATES WITH RESTAURANT INFORMATION
 $(".cities").click(function () {
     hideCities();
+    hideRestaurants();
     cityid = $(this).attr("data-name");
     var zomatourl = "https://developers.zomato.com/api/v2.1/search?entity_id=" + cityid + "&entity_type=city&count=5&sort=rating&order=asc&apikey=" + zomapikey;
     $.ajax({
@@ -184,9 +186,19 @@ function showRestaurants(){
   })
 }
 
+// ADDS THE 'HIDE' CLASS FOR RESTAURANT INFO DIVS
+function hideRestaurants(){
+  $(".res-box").each(function(){
+    $(this).addClass("hide");
+  })
+}
+
 // REMOVES THE 'HIDE' CLASS FOR FIRST RESTAURANT DIV, FOR ENTITLED BUTTON
 function showEntitled(){
   $(".res-entitled").removeClass("hide");
+  $("#restaurant1").empty();  
+  $("#restaurant2").empty();
+
 }
 
 // SETS THE TEXT VALUE FOR EACH ITEM RESULTED WITH INFO-DISPLAY CLASS
