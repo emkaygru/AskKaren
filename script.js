@@ -18,12 +18,13 @@ $.ajax({
 // SEARCH BUTTON EVENT LISTENER - VALID ENTRY RUNS ZOMATODISPLAY()
 $("#city-button").click(function (event) {
     event.preventDefault();
+          hideCities();
     resetData();
     cityname = $("#city-input").val().trim();
     if (cityname === "") {
         alert("Please enter a city.");
     } else {
-      hideCities();
+
       setTimeout(
         function(){
           zomatoDisplay();
