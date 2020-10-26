@@ -4,9 +4,12 @@
   margin: 0;
   box-sizing: border-box;
   color: #011627;
-  background-color: #fff4f0;
+  background-color: #f8f8f8;
 }
 
+::placeholder{
+  color:  #011627;
+}
 
 /* Headings Styles */
 h1,
@@ -37,7 +40,7 @@ a {
 
 /*Modal Styles*/
 .modal-btn {
-  background-color: #fff4f0!important;
+  background-color: #f8f8f8!important;
 
 }
 
@@ -123,9 +126,9 @@ button.info-display {
   background-color:#011627!important;
 }
 
-
 /* city input button styles */
 .citylink-btn{
+  font-size: 20px;
   color: white;
   padding: 20px;
   background-color:  #006D77;
@@ -139,7 +142,6 @@ button.info-display {
 /* results window styles*/
 .results-window .card-content{
   font-size: 18px;
-
   background-color:  #011627;
 }
 
@@ -184,6 +186,7 @@ button.info-display {
   background: #eee;
   overflow-x: hidden;
   padding: 8px 0;
+  text-align: center;
 }
 
 #adBox {
