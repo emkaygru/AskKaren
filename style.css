@@ -151,6 +151,10 @@ button.info-display {
   background-color:  #011627;
 }
 
+.results-window {
+  width: 25%;
+}
+
 #bad-advice{
   padding: 60px 0 40px 0;
 }
