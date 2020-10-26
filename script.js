@@ -121,6 +121,7 @@ async function entitledDisplay() {
         console.log(response)
         hideCities();
         showEntitledCities();
+        hideRestaurants();
         $("#city3").attr("data-name", response.location_suggestions[0].id);
         $("#city3").text(response.location_suggestions[0].name);
         $("#city4").attr("data-name", response.location_suggestions[1].id);
