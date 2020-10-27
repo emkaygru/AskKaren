@@ -24,7 +24,7 @@ $("#city-button").click(function (event) {
     if (cityname === "") {
         alert("Please enter a city.");
     } else {
-
+      hideRestaurants();
       setTimeout(
         function(){
           zomatoDisplay();
@@ -101,7 +101,7 @@ $("#entitled-button").click(function (event) {
     if (cityname === "") {
         alert("Please enter a city.");
     } else {
-      hideCities();
+      hideRestaurants();
       setTimeout(
         function(){
           entitledDisplay();

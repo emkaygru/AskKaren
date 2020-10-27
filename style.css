@@ -153,7 +153,7 @@ button.info-display {
 }
 
 .results-window {
-  width: 25%;
+  width: 32%;
 }
 
 #bad-advice{
@@ -201,4 +201,10 @@ button.info-display {
 
 #adBox {
   background-color: rgba(0, 0, 0, 0);
+}
+
+@media screen and (max-width: 800px) {
+  .results-window {
+    width: 75%;
+  }
 }
