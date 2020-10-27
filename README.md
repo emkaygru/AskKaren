@@ -44,7 +44,7 @@ Project includes usage of:
 
   Clicking on the speak to manager button within the search results, will take the user to a new window with the contact and restuarant information on Zomato.
 
-![img](/assets/feelingEntitledresult.png)
+![img](/assets/feelingEntitledsingleresult.png)
 
   Clicking the 'I'm feeling entitled' button yields a single result chosen at random from our advanced API.
 
